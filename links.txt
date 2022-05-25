@@ -14,4 +14,5 @@ https://www.quora.com/How-do-I-get-all-grocery-store-location-data-using-Python
 https://plotly.com/python/scatter-plots-on-maps/
 
 # Q1:Goolge API only shows 20 results per search?
-- to be solved.
+- https://stackoverflow.com/questions/15692829/google-places-search-next-page-token-returns-same-results
+- add next-page-token 
