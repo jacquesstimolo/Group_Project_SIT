@@ -32,3 +32,6 @@ https://colab.research.google.com/drive/12FYsD_KJ5105a2jtTJ_EysIUSGhNFhCP#scroll
 # Q1:Goolge API only shows 20 results per search?
 - https://stackoverflow.com/questions/15692829/google-places-search-next-page-token-returns-same-results
 - add next-page-token 
+
+# Q2: Using looping in API occur errors?
+- use time() to have a few seconds break, usually 0.8s is enough. I use longer time here just in case.
