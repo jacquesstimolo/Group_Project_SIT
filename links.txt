@@ -8,3 +8,7 @@ https://search-api.migros.ch/doc#/stores
 
 # Quora:
 https://www.quora.com/How-do-I-get-all-grocery-store-location-data-using-Python
+
+
+# How to insert points on Map:
+https://plotly.com/python/scatter-plots-on-maps/
