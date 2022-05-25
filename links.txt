@@ -1,17 +1,23 @@
 # Google-Maps API:
 https://console.cloud.google.com/apis/credentials?authuser=1&project=abstract-arc-351308
 
-
 # Migros API:
 https://search-api.migros.ch/doc#/stores
-
 
 # Quora:
 https://www.quora.com/How-do-I-get-all-grocery-store-location-data-using-Python
 
-
 # How to insert points on Map:
 https://plotly.com/python/scatter-plots-on-maps/
+
+
+
+
+# Working Plotting of points on map:
+https://colab.research.google.com/drive/12FYsD_KJ5105a2jtTJ_EysIUSGhNFhCP#scrollTo=HP-tpm6Wji6g
+
+
+
 
 # Q1:Goolge API only shows 20 results per search?
 - https://stackoverflow.com/questions/15692829/google-places-search-next-page-token-returns-same-results
