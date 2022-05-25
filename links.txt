@@ -1,0 +1,10 @@
+# Google-Maps API:
+https://console.cloud.google.com/apis/credentials?authuser=1&project=abstract-arc-351308
+
+
+# Migros API:
+https://search-api.migros.ch/doc#/stores
+
+
+# Quora:
+https://www.quora.com/How-do-I-get-all-grocery-store-location-data-using-Python
