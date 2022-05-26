@@ -1,64 +1,64 @@
 ,address,name,rating,users_rating_num,lat,lng,name_s
-0,"Am Suteracher 14, 8048 Zürich, Switzerland",Coop Supermarkt Zürich Suteracher,4.1,137,47.389955,8.4720952,coop
-1,"Badenerstrasse 244, 8004 Zürich, Switzerland",Coop Supermarkt Zürich Lochergut,4.2,662,47.3757341,8.5173337,coop
-2,"Badenerstrasse 333, 8003 Zürich, Switzerland",Coop Supermarkt Zürich Albisriederplatz,4.1,749,47.37771129999999,8.5111067,coop
-3,"Bahnhofbrücke 1, 8001 Zürich, Switzerland",Coop Supermarkt Zürich Bahnhofbrücke,4.3,3000,47.3764584,8.5423575,coop
-4,"Birmensdorferstrasse 200, 8003 Zürich, Switzerland",Coop Supermarkt Zürich Wiedikon,4.3,646,47.3707958,8.5160521,coop
-5,"Frankentalerstrasse 20, 8049 Zürich, Switzerland",Coop Supermarket,4.3,261,47.4058119,8.4813824,coop
-6,"Giessereistrasse 18, 8005 Zürich, Switzerland",Coop Supermarkt Zürich Puls 5,4.1,225,47.3907648,8.518288499999999,coop
-7,"Halle, Löwenstrasse, 8021 Zürich, Switzerland",Coop Supermarkt Zürich ShopVille HB,4.0,809,47.37780739999999,8.5384649,coop
-8,"Hofwiesenstrasse 370, 8050 Zürich, Switzerland",Coop,4.2,303,47.4111989,8.544497,coop
-9,"Hohlstrasse 35, 8004 Zürich, Switzerland",Coop Supermarkt Zürich Hohlstrasse,4.0,327,47.3771488,8.5265379,coop
-10,"Lindenpl. 6, 8048 Zürich, Switzerland",Coop Supermarkt Zürich Lindenplatz,4.0,283,47.3876386,8.4853846,coop
-11,"Maagpl. 1, 8005 Zürich, Switzerland",Coop Supermarkt Zürich Maagplatz,4.1,60,47.3859754,8.516154,coop
-12,"Regensdorferstrasse 9, 8049 Zürich, Switzerland",Coop Supermarkt Zürich Hönggermarkt,4.2,284,47.4027056,8.4984139,coop
-13,"Röntgenstrasse 48, 8005 Zürich, Switzerland",Coop Supermarkt Zürich Josefstrasse,4.0,197,47.3847993,8.5272322,coop
-14,"Röschibachstrasse 22, 8037 Zürich, Switzerland",Coop Supermarkt Zürich Wipkingerbrücke,3.9,295,47.3927709,8.524651,coop
-15,"Rütihofstrasse 15, 8049 Zürich, Switzerland",Coop Supermarkt Zürich Rütihof,3.8,112,47.413717,8.4795634,coop
-16,"Universitätstrasse 101, 8006 Zürich, Switzerland",Coop Supermarkt Zürich Rigiplatz,3.9,99,47.3838811,8.5481176,coop
-17,"Universitätstrasse 73, 8006 Zürich, Switzerland",Coop Supermarkt Zürich Universitätstrasse,3.9,238,47.3825177,8.5480238,coop
-18,"Vulkanpl., 8048 Zürich, Switzerland",Coop Supermarkt Zürich Westlink,4.1,417,47.3921058,8.4901239,coop
-19,"Wolfgang-Pauli-Strasse 14, 8049 Zürich, Switzerland",Coop Supermarkt Zürich ETH Hönggerberg,3.9,143,47.4083915,8.5079119,coop
-20,"In der Ey 85, 8047 Zürich, Switzerland",Coop Supermarkt Zürich Triemli,4.3,223,47.3705382,8.4921778,coop
-21,"Zollstrasse 42, 8005 Zürich, Switzerland",Coop Supermarkt Zürich Zollstrasse,4.1,139,47.380501,8.5348354,coop
-22,"Bleicherweg 19, 8002 Zürich, Switzerland",Coop Supermarkt Zürich Bleicherweg,3.9,152,47.36785580000001,8.5360034,coop
-23,"Pfingstweidstrasse 106, 8005 Zürich, Switzerland",Coop Supermarkt Zürich Hard Turm Park,4.1,225,47.3911136,8.5080083,coop
-24,"Albisriederstrasse 334, 8047 Zürich, Switzerland",Coop Supermarkt Zürich A-Park,4.0,384,47.3758858,8.487269399999999,coop
-25,"Europaallee 5, 8004 Zürich, Switzerland",Coop Supermarkt Zürich Europaallee Passage,4.2,336,47.3780286,8.534917499999999,coop
-26,"Uetlibergstrasse 20, 8045 Zürich, Switzerland",Coop Supermarkt Zürich Manessehof,4.0,235,47.36488989999999,8.5211127,coop
-27,"Badenerstrasse 15, 8004 Zürich, Switzerland",Coop Supermarkt Zürich Stauffacher,4.1,669,47.3734925,8.5306229,coop
-28,"Stadelhoferstrasse 10, 8001 Zürich, Switzerland",coop Zürich Stadelhofen,4.2,493,47.3665879,8.5478226,coop
-29,"Vulkanstrasse 108, 8048 Zürich, Switzerland",Coop Supermarkt Zürich Vulkanstrasse,4.3,50,47.3935247,8.4838335,coop
-30,"Bärengasse 16, 8001 Zürich, Switzerland",Coop Supermarkt Zürich Bärengasse,4.2,259,47.3702034,8.5373202,coop
-31,"Tessinerpl. 10, 8002 Zürich, Switzerland",Coop Supermarkt Zürich Enge Bahnhof,3.8,42,47.3644302,8.530957899999999,coop
-32,"Schwamendingenstrasse 39, 8050 Zürich, Switzerland",Coop Supermarkt Zürich Dorflinde,4.0,260,47.4076138,8.5499337,coop
-33,"Baslerstrasse 50, 8066 Zürich, Switzerland",Coop Supermarkt Zürich Letzipark,4.2,390,47.3859855,8.499333,coop
-34,"Wallisellenstrasse 333, 8050 Zürich, Switzerland",Coop Supermarkt Zürich Precisa,4.1,297,47.4113768,8.562585,coop
-35,"Badenerstrasse 650, 8048 Zürich, Switzerland",Coop Supermarkt Zürich Altstetten,4.1,314,47.3873678,8.4887277,coop
-36,"Scheffelstrasse 12, 8037 Zürich, Switzerland",Coop Supermarkt Zürich Scheffelstrasse,4.0,295,47.3938032,8.5295861,coop
-37,"Seefeldstrasse 35, 8008 Zürich, Switzerland",Coop Supermarkt Zürich Brotgasse,4.2,114,47.36317469999999,8.5499358,coop
-38,"Museumstrasse, 8001 Zürich, Switzerland",Coop,4.2,71,47.3778076,8.5384652,coop
-39,"Sophie-Taeuber-Strasse 4, 8050 Zürich, Switzerland",Coop Supermarkt Zürich Eleven,4.3,586,47.4131828,8.5406746,coop
-40,"Bahnhofstrasse 57, 8001 Zürich, Switzerland",Coop Supermarkt City Zürich St. Annahof Food,4.3,2948,47.37295719999999,8.537843400000002,coop
-41,"Forchstrasse 4, 8008 Zürich, Switzerland",Coop Supermarkt Zürich Kreuzplatz,3.9,211,47.3644499,8.5548427,coop
-42,"Seefeldstrasse 123, 8008 Zürich, Switzerland",Coop Supermarkt Zürich Seefeld,4.2,439,47.3580373,8.5547665,coop
-43,"Schwellistrasse 69, 8052 Zürich, Switzerland",Coop Supermarkt Zürich Schwellistrasse,4.2,157,47.42494689999999,8.5376855,coop
-44,"Mühlackerstrasse 199, 8046 Zürich, Switzerland",Coop Supermarkt Zürich Mühlackerstrasse,4.2,221,47.4255113,8.4969846,coop
-45,"Wehntalerstrasse 549, 8046 Zürich, Switzerland",Coop Supermarkt Zürich Wehntalerstrasse,4.0,205,47.4189272,8.5056214,coop
-46,"Zürichbergstrasse 75, 8044 Zürich, Switzerland",Coop Supermarkt Zürich Fluntern,3.9,164,47.3764154,8.5595936,coop
-47,"Gutstrasse 159, 8047 Zürich, Switzerland",Coop Supermarkt Zürich Gutstrasse,3.9,212,47.3737036,8.502472599999999,coop
-48,"Alte Kalchbühlstrasse 15, 8038 Zürich, Switzerland",Coop Supermarkt Zürich Wollishofen,4.3,596,47.3398626,8.530491099999999,coop
-49,"Milchbuckstrasse 1/5, 8057 Zürich, Switzerland",Coop Supermarkt Zürich Milchbuck,3.8,403,47.3954544,8.540429699999999,coop
-50,"Andreasstrasse 5, 8050 Zürich, Switzerland",Coop Supermarkt Zürich Andreasturm,4.4,108,47.41290499999999,8.5473555,coop
-51,"Saatlenstrasse 12, 8051 Zürich, Switzerland",Coop Supermarkt Zürich Schwamendingen,3.9,558,47.4048761,8.571610999999999,coop
-52,"Seestrasse 339, 8038 Zürich, Switzerland",Coop Supermarkt Zürich Wollishofen Seestr.,4.1,167,47.3471884,8.533073,coop
-53,"Friesenbergpl. 3, 8045 Zürich, Switzerland",Coop Supermarkt Zürich Zentrum Friesenberg,4.0,86,47.3607817,8.5065929,coop
-54,"Maschinenstrasse 10, 8005 Zürich, Switzerland",Coop Supermarkt Pfingstweidstrasse Prime 2,4.4,73,47.3873719,8.5173322,coop
-55,"Kalanderpl. 1, 8045 Zürich, Switzerland",Coop Supermarkt Zürich Sihlcity Supermarkt,4.4,756,47.3576232,8.5231751,coop
-56,"Wallisellenstrasse 1, 8050 Zürich, Switzerland",Coop City Zürich Oerlikon Food,4.3,995,47.4103751,8.5466839,coop
-57,"Hardstrasse 221, 8005 Zürich, Switzerland",Coop Pronto Shop Zürich Prime Tower,4.0,152,47.3863975,8.517684299999999,coop
-58,"Löwenstrasse 7, 8001 Zürich, Switzerland",Coop Pronto Shop Zürich Löwenstrasse,4.1,84,47.3733678,8.534488,coop
-59,"Seefeldstrasse 199, 8008 Zürich, Switzerland",Coop Supermarkt Zürich Tiefenbrunnen,3.9,190,47.3533693,8.559115,coop
+0,"Am Suteracher 14, 8048 Zürich, Switzerland",Coop Supermarkt Zürich Suteracher,4.1,137,47.389955,8.4720952,Coop
+1,"Badenerstrasse 244, 8004 Zürich, Switzerland",Coop Supermarkt Zürich Lochergut,4.2,662,47.3757341,8.5173337,Coop
+2,"Badenerstrasse 333, 8003 Zürich, Switzerland",Coop Supermarkt Zürich Albisriederplatz,4.1,749,47.37771129999999,8.5111067,Coop
+3,"Bahnhofbrücke 1, 8001 Zürich, Switzerland",Coop Supermarkt Zürich Bahnhofbrücke,4.3,3000,47.3764584,8.5423575,Coop
+4,"Birmensdorferstrasse 200, 8003 Zürich, Switzerland",Coop Supermarkt Zürich Wiedikon,4.3,646,47.3707958,8.5160521,Coop
+5,"Frankentalerstrasse 20, 8049 Zürich, Switzerland",Coop Supermarket,4.3,261,47.4058119,8.4813824,Coop
+6,"Giessereistrasse 18, 8005 Zürich, Switzerland",Coop Supermarkt Zürich Puls 5,4.1,225,47.3907648,8.518288499999999,Coop
+7,"Halle, Löwenstrasse, 8021 Zürich, Switzerland",Coop Supermarkt Zürich ShopVille HB,4.0,809,47.37780739999999,8.5384649,Coop
+8,"Hofwiesenstrasse 370, 8050 Zürich, Switzerland",Coop,4.2,303,47.4111989,8.544497,Coop
+9,"Hohlstrasse 35, 8004 Zürich, Switzerland",Coop Supermarkt Zürich Hohlstrasse,4.0,327,47.3771488,8.5265379,Coop
+10,"Lindenpl. 6, 8048 Zürich, Switzerland",Coop Supermarkt Zürich Lindenplatz,4.0,283,47.3876386,8.4853846,Coop
+11,"Maagpl. 1, 8005 Zürich, Switzerland",Coop Supermarkt Zürich Maagplatz,4.1,60,47.3859754,8.516154,Coop
+12,"Regensdorferstrasse 9, 8049 Zürich, Switzerland",Coop Supermarkt Zürich Hönggermarkt,4.2,284,47.4027056,8.4984139,Coop
+13,"Röntgenstrasse 48, 8005 Zürich, Switzerland",Coop Supermarkt Zürich Josefstrasse,4.0,197,47.3847993,8.5272322,Coop
+14,"Röschibachstrasse 22, 8037 Zürich, Switzerland",Coop Supermarkt Zürich Wipkingerbrücke,3.9,295,47.3927709,8.524651,Coop
+15,"Rütihofstrasse 15, 8049 Zürich, Switzerland",Coop Supermarkt Zürich Rütihof,3.8,112,47.413717,8.4795634,Coop
+16,"Universitätstrasse 101, 8006 Zürich, Switzerland",Coop Supermarkt Zürich Rigiplatz,3.9,99,47.3838811,8.5481176,Coop
+17,"Universitätstrasse 73, 8006 Zürich, Switzerland",Coop Supermarkt Zürich Universitätstrasse,3.9,238,47.3825177,8.5480238,Coop
+18,"Vulkanpl., 8048 Zürich, Switzerland",Coop Supermarkt Zürich Westlink,4.1,417,47.3921058,8.4901239,Coop
+19,"Wolfgang-Pauli-Strasse 14, 8049 Zürich, Switzerland",Coop Supermarkt Zürich ETH Hönggerberg,3.9,143,47.4083915,8.5079119,Coop
+20,"In der Ey 85, 8047 Zürich, Switzerland",Coop Supermarkt Zürich Triemli,4.3,223,47.3705382,8.4921778,Coop
+21,"Zollstrasse 42, 8005 Zürich, Switzerland",Coop Supermarkt Zürich Zollstrasse,4.1,139,47.380501,8.5348354,Coop
+22,"Bleicherweg 19, 8002 Zürich, Switzerland",Coop Supermarkt Zürich Bleicherweg,3.9,152,47.36785580000001,8.5360034,Coop
+23,"Pfingstweidstrasse 106, 8005 Zürich, Switzerland",Coop Supermarkt Zürich Hard Turm Park,4.1,225,47.3911136,8.5080083,Coop
+24,"Albisriederstrasse 334, 8047 Zürich, Switzerland",Coop Supermarkt Zürich A-Park,4.0,384,47.3758858,8.487269399999999,Coop
+25,"Europaallee 5, 8004 Zürich, Switzerland",Coop Supermarkt Zürich Europaallee Passage,4.2,336,47.3780286,8.534917499999999,Coop
+26,"Uetlibergstrasse 20, 8045 Zürich, Switzerland",Coop Supermarkt Zürich Manessehof,4.0,235,47.36488989999999,8.5211127,Coop
+27,"Badenerstrasse 15, 8004 Zürich, Switzerland",Coop Supermarkt Zürich Stauffacher,4.1,669,47.3734925,8.5306229,Coop
+28,"Stadelhoferstrasse 10, 8001 Zürich, Switzerland",coop Zürich Stadelhofen,4.2,493,47.3665879,8.5478226,Coop
+29,"Vulkanstrasse 108, 8048 Zürich, Switzerland",Coop Supermarkt Zürich Vulkanstrasse,4.3,50,47.3935247,8.4838335,Coop
+30,"Bärengasse 16, 8001 Zürich, Switzerland",Coop Supermarkt Zürich Bärengasse,4.2,259,47.3702034,8.5373202,Coop
+31,"Tessinerpl. 10, 8002 Zürich, Switzerland",Coop Supermarkt Zürich Enge Bahnhof,3.8,42,47.3644302,8.530957899999999,Coop
+32,"Schwamendingenstrasse 39, 8050 Zürich, Switzerland",Coop Supermarkt Zürich Dorflinde,4.0,260,47.4076138,8.5499337,Coop
+33,"Baslerstrasse 50, 8066 Zürich, Switzerland",Coop Supermarkt Zürich Letzipark,4.2,390,47.3859855,8.499333,Coop
+34,"Wallisellenstrasse 333, 8050 Zürich, Switzerland",Coop Supermarkt Zürich Precisa,4.1,297,47.4113768,8.562585,Coop
+35,"Badenerstrasse 650, 8048 Zürich, Switzerland",Coop Supermarkt Zürich Altstetten,4.1,314,47.3873678,8.4887277,Coop
+36,"Scheffelstrasse 12, 8037 Zürich, Switzerland",Coop Supermarkt Zürich Scheffelstrasse,4.0,295,47.3938032,8.5295861,Coop
+37,"Seefeldstrasse 35, 8008 Zürich, Switzerland",Coop Supermarkt Zürich Brotgasse,4.2,114,47.36317469999999,8.5499358,Coop
+38,"Museumstrasse, 8001 Zürich, Switzerland",Coop,4.2,71,47.3778076,8.5384652,Coop
+39,"Sophie-Taeuber-Strasse 4, 8050 Zürich, Switzerland",Coop Supermarkt Zürich Eleven,4.3,586,47.4131828,8.5406746,Coop
+40,"Bahnhofstrasse 57, 8001 Zürich, Switzerland",Coop Supermarkt City Zürich St. Annahof Food,4.3,2948,47.37295719999999,8.537843400000002,Coop
+41,"Forchstrasse 4, 8008 Zürich, Switzerland",Coop Supermarkt Zürich Kreuzplatz,3.9,211,47.3644499,8.5548427,Coop
+42,"Seefeldstrasse 123, 8008 Zürich, Switzerland",Coop Supermarkt Zürich Seefeld,4.2,439,47.3580373,8.5547665,Coop
+43,"Schwellistrasse 69, 8052 Zürich, Switzerland",Coop Supermarkt Zürich Schwellistrasse,4.2,157,47.42494689999999,8.5376855,Coop
+44,"Mühlackerstrasse 199, 8046 Zürich, Switzerland",Coop Supermarkt Zürich Mühlackerstrasse,4.2,221,47.4255113,8.4969846,Coop
+45,"Wehntalerstrasse 549, 8046 Zürich, Switzerland",Coop Supermarkt Zürich Wehntalerstrasse,4.0,205,47.4189272,8.5056214,Coop
+46,"Zürichbergstrasse 75, 8044 Zürich, Switzerland",Coop Supermarkt Zürich Fluntern,3.9,164,47.3764154,8.5595936,Coop
+47,"Gutstrasse 159, 8047 Zürich, Switzerland",Coop Supermarkt Zürich Gutstrasse,3.9,212,47.3737036,8.502472599999999,Coop
+48,"Alte Kalchbühlstrasse 15, 8038 Zürich, Switzerland",Coop Supermarkt Zürich Wollishofen,4.3,596,47.3398626,8.530491099999999,Coop
+49,"Milchbuckstrasse 1/5, 8057 Zürich, Switzerland",Coop Supermarkt Zürich Milchbuck,3.8,403,47.3954544,8.540429699999999,Coop
+50,"Andreasstrasse 5, 8050 Zürich, Switzerland",Coop Supermarkt Zürich Andreasturm,4.4,108,47.41290499999999,8.5473555,Coop
+51,"Saatlenstrasse 12, 8051 Zürich, Switzerland",Coop Supermarkt Zürich Schwamendingen,3.9,558,47.4048761,8.571610999999999,Coop
+52,"Seestrasse 339, 8038 Zürich, Switzerland",Coop Supermarkt Zürich Wollishofen Seestr.,4.1,167,47.3471884,8.533073,Coop
+53,"Friesenbergpl. 3, 8045 Zürich, Switzerland",Coop Supermarkt Zürich Zentrum Friesenberg,4.0,86,47.3607817,8.5065929,Coop
+54,"Maschinenstrasse 10, 8005 Zürich, Switzerland",Coop Supermarkt Pfingstweidstrasse Prime 2,4.4,73,47.3873719,8.5173322,Coop
+55,"Kalanderpl. 1, 8045 Zürich, Switzerland",Coop Supermarkt Zürich Sihlcity Supermarkt,4.4,756,47.3576232,8.5231751,Coop
+56,"Wallisellenstrasse 1, 8050 Zürich, Switzerland",Coop City Zürich Oerlikon Food,4.3,995,47.4103751,8.5466839,Coop
+57,"Hardstrasse 221, 8005 Zürich, Switzerland",Coop Pronto Shop Zürich Prime Tower,4.0,152,47.3863975,8.517684299999999,Coop
+58,"Löwenstrasse 7, 8001 Zürich, Switzerland",Coop Pronto Shop Zürich Löwenstrasse,4.1,84,47.3733678,8.534488,Coop
+59,"Seefeldstrasse 199, 8008 Zürich, Switzerland",Coop Supermarkt Zürich Tiefenbrunnen,3.9,190,47.3533693,8.559115,Coop
 0,"Baslerstrasse 50, 8048 Zürich, Switzerland",Denner Discount,4.0,33,47.38592480000001,8.499636299999999,Denner
 1,"Birmensdorferstrasse 320, 8055 Zürich, Switzerland",Denner Discount,4.1,104,47.3700753,8.5087137,Denner
 2,"Einkaufszentrum, Regensdorferstrasse 16, 8049 Zürich, Switzerland",Denner Discount,4.4,39,47.4032859,8.4982778,Denner

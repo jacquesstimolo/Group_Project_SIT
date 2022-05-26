@@ -8,7 +8,7 @@ https://search-api.migros.ch/doc#/stores
 https://www.quora.com/How-do-I-get-all-grocery-store-location-data-using-Python
 
 
-
+test write
 
 # Google Drive:
 https://drive.google.com/drive/folders/1JnmPgZLOZvsF-2vwvJ-ApBPBAuihN4ES
@@ -41,3 +41,6 @@ https://automating-gis-processes.github.io/CSC18/lessons/L4/point-in-polygon.htm
 
 # Q2: Using looping in API occur errors?
 - use time() to have a few seconds break, usually 0.8s is enough. I use longer time here just in case.
+
+
+test
