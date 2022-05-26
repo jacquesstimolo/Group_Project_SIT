@@ -29,7 +29,8 @@ https://colab.research.google.com/drive/12FYsD_KJ5105a2jtTJ_EysIUSGhNFhCP#scroll
 # How to scatter points on Choropleth-map:
 https://community.plotly.com/t/how-can-i-combine-choropleth-and-scatter-layer-in-a-plotly-map/29842
 
-
+# How to check if point inside polygone:
+https://automating-gis-processes.github.io/CSC18/lessons/L4/point-in-polygon.html
 
 
 
