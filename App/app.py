@@ -24,17 +24,17 @@ import streamlit as st
 #--------------------------------------------
 # DataFrames:
 #--------------------------------------------
-migros = pd.read_csv('/data/migros.csv')
+migros = pd.read_csv('data/migros.csv')
 migros = migros[['address', 'name', 'rating', 'nr_users_rating', 'lat', 'lng', 'Kreis_id']]
 st.dataframe(migros)
 
 
-competition = pd.read_csv('/data/competitors.csv')
+competition = pd.read_csv('data/competitors.csv')
 competition = competition[['address', 'name_s', 'rating', 'users_rating_num', 'lat', 'lng', 'Kreis_id']]
 st.dataframe(competition)
 
 
-people = pd.read_csv('/data/population_workingclass.csv')
+people = pd.read_csv('data/population_workingclass.csv')
 people = people[['Kreise', 'Count', 'id_Kreis']]
 st.dataframe(people)
 
