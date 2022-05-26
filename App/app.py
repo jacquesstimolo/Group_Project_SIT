@@ -17,6 +17,11 @@ import plotly.graph_objects as go
 
 import streamlit as st
 
+# Google-maps:
+from geopy.geocoders import GoogleV3
+import geopy.distance
+import googlemaps
+
 
 
 
@@ -101,9 +106,10 @@ default_color['color'] = [0 for _ in range(0,12)]
 
 
 
+
 #-----------------------
 # Only Migros:
-
+#-----------------------
 fig = go.Figure(go.Choroplethmapbox(geojson=stadtkreise, locations=default_color.id_Kreis, z=default_color.color,
                                     colorscale="greys", zmin=-10, zmax=10, 
                                     marker_opacity=0.5, marker_line_width=0,
@@ -113,6 +119,7 @@ fig = go.Figure(go.Choroplethmapbox(geojson=stadtkreise, locations=default_color
 
 fig.add_scattermapbox(lat = migros.lat.tolist(),
                       lon = migros.lng.tolist(),
+                      line_color = 'red',
                       mode="markers+text",
                       marker={"size": 5},
                       text=migros["address"],
@@ -125,6 +132,8 @@ fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
 st.header("Location of all Migros in Zürich:")
 st.plotly_chart(fig)
+
+
 
 
 #-----------------------
@@ -200,6 +209,7 @@ st.plotly_chart(fig)
 
 
 
+
 #-----------------------
 # Location of Competition:
 #-----------------------
@@ -229,11 +239,13 @@ st.header("Where is the Competition concentrated?")
 st.plotly_chart(fig)
 
 
+
+
 #-----------------------
 # Reference coords API:
 #-----------------------
 fig = go.Figure(go.Choroplethmapbox(geojson=stadtkreise, locations=reference.id, z=reference.color,
-                                    colorscale="Viridis",
+                                    colorscale="greys",
                                     showscale=False,
                                     text = reference['id'],
                                     hovertemplate = "Kreis %{text}<extra></extra>",
@@ -252,6 +264,119 @@ fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
 st.header("Reference points for googlemaps-API:")
 st.plotly_chart(fig)
+
+
+
+
+#-----------------------
+# Google-Maps API:
+#-----------------------
+API = 'AIzaSyAYJBfeZxsN05Pkc1aoU60oL2VZpMn9b2g'
+gmap = googlemaps.Client(key=API)
+
+
+dict_duration = dict()
+
+for id in range(1, 13):
+    df_aux = migros[migros['Kreis_id'] == id]
+    
+    addresses = df_aux['address'].tolist()
+
+    coords = zip(df_aux['lat'].tolist(), df_aux['lng'].tolist())
+
+    ref_lat = dict_coords[id][0]
+    ref_lon = dict_coords[id][1]
+
+    # print(ref_lat, ref_lon)
+    pos = 0
+    for coord in coords:
+        d_goog = gmap.distance_matrix((ref_lat, ref_lon), coord, mode='driving')
+        duration = new_d = d_goog['rows'][0]['elements'][0]['duration']['text']
+        dict_duration[addresses[pos]] = duration
+        pos += 1
+    
+
+df = pd.DataFrame(dict_duration.items(), columns=['address', 'Duration'])
+
+get_duration = lambda x: int(x.split(' ')[0])
+
+df['duration_val'] = df.Duration.apply(get_duration)
+
+# Merge Migros and Distance dataframe:
+migros_dist = pd.merge(migros, df)
+
+st.dataframe(migros_dist[['Kreis_id', 'address', 'Duration']])
+
+
+
+fig = go.Figure(go.Choroplethmapbox(geojson=stadtkreise, locations=default_color.id_Kreis, z=default_color.color,
+                                    colorscale="greys", zmin=-10, zmax=10,
+                                    marker_opacity=0.5, marker_line_width=0,
+                                    showscale=False,
+                                    text = people['Kreise'],
+                                    hovertemplate = "%{text}<extra></extra>",))
+
+fig.add_scattermapbox(lat = migros_dist.lat.tolist(),
+                      lon = migros_dist.lng.tolist(),
+                      line_color = 'red',
+                      mode="markers+text",
+                      marker={"size": 5},
+                      text=migros_dist["address"],
+                      customdata=migros_dist[['rating', 'nr_users_rating', 'Kreis_id', 'name', 'Duration']],
+                      hovertemplate = "DURATION: %{customdata[4]} <br>%{customdata[3]} <br>%{text}<br>Kreis %{customdata[2]} <br>lat: %{lat:.2f}   lon: %{lon:.2f}<br>Rating: %{customdata[0]},  Nr Ratings: %{customdata[1]}<extra></extra>",)
+
+
+fig.add_scattermapbox(lat = reference.lat.tolist(),
+                      lon = reference.lon.tolist(),
+                      line_color = 'black',
+                      mode="markers+text",
+                      hovertemplate = "REFERENCE: <br>Lat: %{lat}°  Lon: %{lon}°<extra></extra>",
+                      marker={"size": 5})
+
+fig.update(layout_showlegend=False)
+fig.update_layout(mapbox_style="carto-positron",
+                  mapbox_zoom=10.5, mapbox_center = {"lat": 47.377220, "lon": 8.539902})
+fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+
+st.header("Location of all Migros in Zürich:")
+st.plotly_chart(fig)
+
+
+
+#-----------------------
+# Calculate avarage duration:
+#-----------------------
+nr_stores = migros_dist.groupby('Kreis_id').duration_val.count().tolist()
+durations = migros_dist.groupby('Kreis_id').duration_val.sum().tolist()
+
+average = []
+vals = list(zip(durations, nr_stores))
+for val in vals:
+    d, nr = val
+    average.append(round(d/nr, 1))
+
+df1 = pd.DataFrame()
+df1['id'] = [i for i in range(1, 13)]
+df1['average'] = average
+
+
+fig = go.Figure(go.Choroplethmapbox(geojson=stadtkreise, locations=df1.id, z=df1.average,
+                                    colorscale="Viridis",
+                                    marker_opacity=0.5, marker_line_width=0,
+                                    text = df1[['id','average']],
+                                    hovertemplate = "Kreis %{text[0]}<br>Average travel Time: %{text[1]} min<extra></extra>"))
+
+fig.update_layout(mapbox_style="carto-positron",
+                  mapbox_zoom=10.5, mapbox_center = {"lat": 47.377220, "lon": 8.539902})
+fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+
+
+
+st.header("Average travel time to Migros:")
+st.plotly_chart(fig)
+
+
+
 
 
 
