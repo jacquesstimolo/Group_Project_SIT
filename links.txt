@@ -43,4 +43,12 @@ https://automating-gis-processes.github.io/CSC18/lessons/L4/point-in-polygon.htm
 - use time() to have a few seconds break, usually 0.8s is enough. I use longer time here just in case.
 
 
-test
+# Links to the csv data Files:
+- mittlere Wohnbevölkerung (BEV322OD3224.csv) -> https://data.stadt-zuerich.ch/dataset/bev_bestand_jahr_mittlerewbev_od3224
+- Bevölkerung (BEV325OD3250.csv) -> https://data.stadt-zuerich.ch/dataset/bev_monat_bestand_quartier_geschl_ag_herkunft_od3250
+- Geburten/Todesfälle (BEV403OD4031.csv) -> https://data.stadt-zuerich.ch/dataset/bev_tag_geburten_quartier_geschl_ag_herkunft_od4031
+- Todesfälle (BEV4210OD4211.csv) -> https://data.stadt-zuerich.ch/dataset/bev_tag_todesfaelle_quartier_geschl_ag_herkunft_od4211
+- Matchingtabelle (matchingIDs_AdminID-WikidataID.csv) -> https://data.stadt-zuerich.ch/dataset/matchingtab-quartnr-wikidataid
+- Zusatzleistungsbeziehende (sd_azl_zlbeziehende_altersgruppen.csv) -> https://data.stadt-zuerich.ch/dataset/sd_azl_zlbeziehende_altersgruppen
+- replaced: Sozialhilfequote (sd_sod_sozialhilfequote_stadtquartier.csv) -> https://data.stadt-zuerich.ch/dataset/sd_sod_sozialhilfequote_stadtquartier
+- mittleres Einkommen (WIR100OD1003.csv) -> https://data.stadt-zuerich.ch/dataset/fd_median_einkommen_quartier_od1003
