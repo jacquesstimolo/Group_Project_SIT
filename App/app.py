@@ -3,6 +3,7 @@
 #--------------------------------------------
 # Standard imports
 from git import Reference
+import numpy as np
 import pandas as pd
 import json
 
@@ -188,6 +189,63 @@ fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
 st.header("Location of all Migros and Competitors in Zürich:")
 st.plotly_chart(fig)
+
+
+
+
+
+
+#-----------------------
+# Rating of Migros:
+#-----------------------
+fig = go.Figure(go.Choroplethmapbox(geojson=stadtkreise, locations=default_color.id_Kreis, z=default_color.color,
+                                    colorscale="greys",
+                                    marker_opacity=0.5, 
+                                    marker_line_width=0,
+                                    showscale=False))
+
+fig.add_scattermapbox(lat = migros.lat.tolist(),
+                      lon = migros.lng.tolist(),
+                      line_color = 'red',
+                      mode="markers+text",
+                      marker=go.scattermapbox.Marker(size= np.log(migros.nr_users_rating)*1.5), 
+                      text=migros["address"],
+                      customdata=migros[['rating', 'nr_users_rating', 'Kreis_id']],
+                      hovertemplate = "MIGROS <br>%{text}<br>Kreis %{customdata[2]} <br>Lat: %{lat:.2f}   Lon: %{lon:.2f}<br>Rating: %{customdata[0]},  Nr Ratings: %{customdata[1]}<extra></extra>")
+
+df_coop = competition[competition.name_s == 'Coop']
+
+fig.add_scattermapbox(lat = df_coop.lat.tolist(),
+                      lon = df_coop.lng.tolist(),
+                      line_color = 'green',
+                      mode="markers+text",
+                      marker=go.scattermapbox.Marker(size= np.log(df_coop.users_rating_num)*1.5), 
+                      text=df_coop["address"],
+                      customdata=df_coop[['rating', 'users_rating_num', 'Kreis_id']],
+                      hovertemplate = "COOP <br>%{text}<br>Kreis %{customdata[2]} <br>Lat: %{lat:.2f}   Lon: %{lon:.2f}<br>Rating: %{customdata[0]},  Nr Ratings: %{customdata[1]}<extra></extra>")
+
+list_stores_names = ['Denner', 'Aldi', 'Lidl', 'Spar']
+
+for store in list_stores_names:
+    df_aux = competition[competition.name_s == store]
+    fig.add_scattermapbox(lat = df_aux.lat.tolist(),
+                        lon = df_aux.lng.tolist(),
+                        line_color = 'blue',
+                        mode="markers+text",
+                        marker=go.scattermapbox.Marker(size= np.log(df_aux.users_rating_num)*1.5), 
+                        text=df_aux["address"],
+                        customdata=df_aux[['rating', 'users_rating_num', 'Kreis_id', 'name_s']],
+                        hovertemplate = "%{customdata[3]} <br>%{text}<br>Kreis %{customdata[2]} <br>lat: %{lat:.2f}   lon: %{lon:.2f}<br>Rating: %{customdata[0]},  Nr Ratings: %{customdata[1]}<extra></extra>",)
+
+fig.update(layout_showlegend=False)
+fig.update_layout(mapbox_style="carto-positron",
+                  mapbox_zoom=10.5, mapbox_center = {"lat": 47.377220, "lon": 8.539902})
+fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+st.plotly_chart(fig)
+
+
+
+
 
 
 
