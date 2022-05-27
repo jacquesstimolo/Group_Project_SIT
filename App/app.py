@@ -157,6 +157,19 @@ fig.add_scattermapbox(lat = migros.lat.tolist(),
                       customdata=migros[['rating', 'nr_users_rating', 'Kreis_id', 'name']],
                       hovertemplate = "%{customdata[3]} <br>%{text}<br>Kreis %{customdata[2]} <br>lat: %{lat:.2f}   lon: %{lon:.2f}<br>Rating: %{customdata[0]},  Nr Ratings: %{customdata[1]}<extra></extra>",)
 
+
+# Competition:
+fig.add_scattermapbox(lat = competition.lat.tolist(),
+                    lon = competition.lng.tolist(),
+                    line_color = 'blue',
+                    mode="markers+text",
+                    marker={"size": 5},
+                    text=competition["address"],
+                    customdata=competition[['rating', 'users_rating_num', 'Kreis_id', 'name_s']],
+                    hovertemplate = "%{customdata[3]} <br>%{text}<br>Kreis %{customdata[2]} <br>lat: %{lat:.2f}   lon: %{lon:.2f}<br>Rating: %{customdata[0]},  Nr Ratings: %{customdata[1]}<extra></extra>",)
+
+
+
 # Competition:
 fig.add_scattermapbox(lat = competition.lat.tolist(),
                     lon = competition.lng.tolist(),
@@ -263,6 +276,7 @@ fig.update_layout(mapbox_style="carto-positron",
 fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
 st.header("Reference points for googlemaps-API:")
+st.dataframe(reference[['id', 'lat', 'lon']])
 st.plotly_chart(fig)
 
 
@@ -271,9 +285,13 @@ st.plotly_chart(fig)
 #-----------------------
 # Google-Maps API:
 #-----------------------
+
+travel_modes = ['walking', 'driving', 'bicycling', 'transit']
+mode = st.selectbox('Choose the type:', travel_modes)
+
+
 API = 'AIzaSyAYJBfeZxsN05Pkc1aoU60oL2VZpMn9b2g'
 gmap = googlemaps.Client(key=API)
-
 
 dict_duration = dict()
 
@@ -290,7 +308,7 @@ for id in range(1, 13):
     # print(ref_lat, ref_lon)
     pos = 0
     for coord in coords:
-        d_goog = gmap.distance_matrix((ref_lat, ref_lon), coord, mode='driving')
+        d_goog = gmap.distance_matrix((ref_lat, ref_lon), coord, mode=mode)
         duration = new_d = d_goog['rows'][0]['elements'][0]['duration']['text']
         dict_duration[addresses[pos]] = duration
         pos += 1
@@ -338,7 +356,7 @@ fig.update_layout(mapbox_style="carto-positron",
                   mapbox_zoom=10.5, mapbox_center = {"lat": 47.377220, "lon": 8.539902})
 fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
-st.header("Location of all Migros in Zürich:")
+st.header(f"Travelling Time to Migros by {mode.upper()}:")
 st.plotly_chart(fig)
 
 
@@ -360,19 +378,38 @@ df1['id'] = [i for i in range(1, 13)]
 df1['average'] = average
 
 
+
+
+st.header("Average travel time to Migros:")
+
+fig = go.Figure()
+    
+for id in range(1, 13):
+    df_aux = migros_dist[migros_dist['Kreis_id'] == id]
+    
+    y = df_aux['duration_val']
+    fig.add_trace(go.Box(y=y, name='Kreis '+str(id)))
+
+
+fig.update_yaxes(title={"text": "Travel-Time to Migros", "font": {"size": 18}})
+fig.update_xaxes(title={"text": "Stadtkreise", "font": {"size": 18}})
+
+st.plotly_chart(fig)
+
+
+
+
 fig = go.Figure(go.Choroplethmapbox(geojson=stadtkreise, locations=df1.id, z=df1.average,
                                     colorscale="Viridis",
                                     marker_opacity=0.5, marker_line_width=0,
-                                    text = df1[['id','average']],
-                                    hovertemplate = "Kreis %{text[0]}<br>Average travel Time: %{text[1]} min<extra></extra>"))
+                                    text = df1['id'],
+                                    customdata = df1[['id','average']],
+                                    hovertemplate = "Kreis %{customdata[0]}<br>Average travel Time: %{customdata[1]} min<extra></extra>"))
 
 fig.update_layout(mapbox_style="carto-positron",
                   mapbox_zoom=10.5, mapbox_center = {"lat": 47.377220, "lon": 8.539902})
 fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
-
-
-st.header("Average travel time to Migros:")
 st.plotly_chart(fig)
 
 
