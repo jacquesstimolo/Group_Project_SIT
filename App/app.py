@@ -46,6 +46,21 @@ people = people[['Kreise', 'Count', 'id_Kreis']]
 # st.dataframe(people)
 
 
+
+habitants = pd.read_csv('data/stats/Habit.csv')
+habitants = habitants[['KreisCd', 'AnzBestWir']]
+habitants['areas'] = [1.8, 11.07, 8.65, 2.9, 1.99, 5.10, 15.02, 4.81, 12.07, 9.09, 13.42, 5.97]                  # Km2
+habitants['ratio'] = round(habitants.AnzBestWir / habitants.areas, 1)
+
+steuer = pd.read_csv('data/stats/Income.csv')
+steuer = steuer[['KreisCd', 'SteuerEinkommen_p50']]
+
+social = pd.read_csv('data/stats/Social.csv')
+social = social[['KreisCd', 'SH_Quote']]
+
+
+
+
 # DP location Kreise:
 # Source: https://latitudelongitude.org/ch/zuerich-kreis-12/
 # ID : lon, lat
@@ -100,6 +115,70 @@ stadtkreise = set_ID(stadtkreise)
 #--------------------------------------------
 # Plotting:
 #--------------------------------------------
+# Stats:
+# Population:
+fig = go.Figure(go.Choroplethmapbox(geojson=stadtkreise, locations=habitants.KreisCd, z=habitants.AnzBestWir,
+                                    colorscale="Viridis",
+                                    marker_opacity=0.5, marker_line_width=0,
+                                    text = habitants['KreisCd'],
+                                    customdata = habitants['AnzBestWir'],
+                                    hovertemplate = "Kreis %{text}<br>Habitants/km2: %{customdata} <extra></extra>"))
+
+fig.update_layout(mapbox_style="carto-positron",
+                  mapbox_zoom=10.5, mapbox_center = {"lat": 47.377220, "lon": 8.539902})
+fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+
+st.header('Where do the People live in Zürich?')
+st.plotly_chart(fig)
+
+fig = go.Figure(go.Choroplethmapbox(geojson=stadtkreise, locations=habitants.KreisCd, z=habitants.ratio,
+                                    colorscale="Viridis",
+                                    marker_opacity=0.5, marker_line_width=0,
+                                    text = habitants['KreisCd'],
+                                    customdata = habitants['ratio'],
+                                    hovertemplate = "Kreis %{text}<br>Habitants/km2: %{customdata} <extra></extra>"))
+
+fig.update_layout(mapbox_style="carto-positron",
+                  mapbox_zoom=10.5, mapbox_center = {"lat": 47.377220, "lon": 8.539902})
+fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+
+st.markdown("#### Density: (Inhabitants/km2)")
+st.plotly_chart(fig)
+
+# Income:
+fig = go.Figure(go.Choroplethmapbox(geojson=stadtkreise, locations=steuer.KreisCd, z=steuer.SteuerEinkommen_p50,
+                                    colorscale="Viridis",
+                                    marker_opacity=0.5, marker_line_width=0,
+                                    text = steuer['KreisCd'],
+                                    customdata = steuer['SteuerEinkommen_p50'],
+                                    hovertemplate = "Kreis %{text}<br>%{customdata} K-CHF<extra></extra>"))
+
+fig.update_layout(mapbox_style="carto-positron",
+                  mapbox_zoom=10.5, mapbox_center = {"lat": 47.377220, "lon": 8.539902})
+fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+
+st.header('Avarage Taxable Income')
+st.plotly_chart(fig)
+
+# Sozial:
+fig = go.Figure(go.Choroplethmapbox(geojson=stadtkreise, locations=social.KreisCd, z=social.SH_Quote,
+                                    colorscale="Viridis",
+                                    marker_opacity=0.5, marker_line_width=0,
+                                    text = social['KreisCd'],
+                                    customdata = social['SH_Quote'],
+                                    hovertemplate = "Kreis %{text}<br> %{customdata}% <extra></extra>"))
+
+fig.update_layout(mapbox_style="carto-positron",
+                  mapbox_zoom=10.5, mapbox_center = {"lat": 47.377220, "lon": 8.539902})
+fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+
+st.header('Unenployment in Zürich')
+st.plotly_chart(fig)
+
+
+
+
+
 # Default Color:
 default_color = pd.DataFrame()
 default_color['id_Kreis'] = people.id_Kreis
