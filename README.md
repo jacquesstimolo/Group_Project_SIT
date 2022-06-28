@@ -19,11 +19,5 @@ The purpose of this project is finding the best places to create new Migros stor
 [Jacques](https://github.com/jstimolo)
 
 [Muchun](https://github.com/Muisbrilliant)
+
 [Patrizia](https://github.com/pw2204)
-
-
-
-
-
-
-
