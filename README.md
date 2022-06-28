@@ -1,13 +1,7 @@
 # Project Name: Mirgos new store location
-
-example image:
-
-
-![alternative text](reports/img/pic01.jpg)
-
 ![Presentation](https://docs.google.com/presentation/d/1hoYELIdoJNQRqMyYMmblM2QrHYWY2cwi/edit#slide=id.p1)
 
-#### -- Project Status: [Completed]
+## Project Status: [Completed]
 
 ## Project Intro/Objective
 The purpose of this project is finding the best places to create new Migros stores. Analyze market opportunities based on the density of existing stores, presence of competitors, and general population density to inform Migros’ development strategy. 
@@ -22,9 +16,14 @@ The purpose of this project is finding the best places to create new Migros stor
 
 
 ## Contributing Members
-**  : [Jacques](https://github.com/jstimolo)**
-**  : [Muchun](https://github.com/Muisbrilliant)**
-**  : [Patrizia](https://github.com/pw2204)**
+[Jacques](https://github.com/jstimolo)
+
+[Muchun](https://github.com/Muisbrilliant)
+[Patrizia](https://github.com/pw2204)
+
+
+
+
 
 
 
