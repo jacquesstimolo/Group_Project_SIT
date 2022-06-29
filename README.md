@@ -16,11 +16,13 @@ The purpose of this project is finding the best places to create new Migros stor
 
 
 ## Contributing Members
-Jacques Stimolo:
-- [ETH Zurich](https://github.com/jstimolo)
-- [private](https://github.com/jacquesstimolo)
-- [E-Mail](mailto:jstimolo@student.ethz.com)
 
 [Muchun](https://github.com/Muisbrilliant)
 
 [Patrizia](https://github.com/pw2204)
+
+
+Jacques Stimolo:
+- [ETH Zurich](https://github.com/jstimolo)
+- [private](https://github.com/jacquesstimolo)
+- [E-Mail](mailto:jstimolo@student.ethz.com)
