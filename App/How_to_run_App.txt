@@ -1,0 +1,11 @@
+# Source:   https://www.codegrepper.com/code-examples/whatever/how+to+run+streamlit
+# Get API-Key: 	https://console.cloud.google.com/	(Insert it in the app.py instead of the invalid one)
+
+=============== TERMINAL ===============
+
+pip install streamlit 	    (or install in Environment)
+
+> Set Up environment from .yml File in "Environment_and_Requirements" Folder
+> Initialize environment
+
+python -m streamlit run app.py
