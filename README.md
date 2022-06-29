@@ -16,7 +16,8 @@ The purpose of this project is finding the best places to create new Migros stor
 
 
 ## Contributing Members
-[Jacques Stimolo](https://github.com/jstimolo)
+[Jacques Stimolo (ETHZ)](https://github.com/jstimolo)
+[Jacques Stimolo (private)](https://github.com/jacquesstimolo)
 
 [Muchun](https://github.com/Muisbrilliant)
 
